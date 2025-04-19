@@ -3,7 +3,7 @@
  */
 
 // Base API URL - Use environment variable
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost';
 
 // Token storage keys
 const ACCESS_TOKEN_KEY = 'access_token';

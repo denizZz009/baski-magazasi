@@ -82,28 +82,35 @@ export default function AdminPage() {
   };
 
   // Kimlik doğrulama kontrolü (basit bir simülasyon)
-  useEffect(() => {
-    const checkAuth = async () => {
-      try {
+   // useEffect(() => {
+     // const checkAuth = async () => {
+       // try {
         // Check if user is authenticated and an admin
-        const response = await fetch('/api/auth/me');
-        const data = await response.json();
+        //  const response = await fetch('/api/auth/me');
+         // const data = await response.json();
 
-        if (data.authenticated && data.user.isAdmin) {
-          setIsAuthenticated(true);
-        } else {
-          setIsAuthenticated(false);
-        }
-      } catch (error) {
-        console.error('Auth check error:', error);
-        setIsAuthenticated(false);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+         // if (data.authenticated && data.user.isAdmin) {
+           // setIsAuthenticated(true);
+         // } else {
+           // setIsAuthenticated(false);
+         // }
+       // } catch (error) {
+        //  console.error('Auth check error:', error);
+        //  setIsAuthenticated(false);
+      // } finally {
+         // setIsLoading(false);
+       // }
+     // };
 
-    checkAuth();
+     // checkAuth();
+   // }, []);
+
+useEffect(() => {
+    // Auth check kaldırıldı - local test için
+    setIsAuthenticated(true);
+    setIsLoading(false);
   }, []);
+
 
   // Admin panelinden çıkış
   const handleLogout = async () => {
